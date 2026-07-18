@@ -7,6 +7,13 @@ from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet
 import random
 
+@st.cache_resource
+def download_nltk_data():
+    nltk.download('punkt', quiet=True)
+    nltk.download('punkt_tab', quiet=True)
+
+download_nltk_data()
+
 lm=WordNetLemmatizer()
 
 lr=joblib.load('chatbot_model.pkl')
