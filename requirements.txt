@@ -1,0 +1,7 @@
+ipykernel
+pandas
+nltk
+scikit-learn
+random
+joblib
+streamlit
